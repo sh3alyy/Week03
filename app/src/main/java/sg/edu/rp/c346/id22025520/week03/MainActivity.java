@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
      Button buttonDisplay;
      EditText etInput;
      ToggleButton tbtn;
+     RadioGroup rgGender;
 
 
     @SuppressLint("MissingInflatedId")
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDisplay = findViewById(R.id.buttonDisplay);
         etInput = findViewById(R.id.editTextInput);
         tbtn = findViewById(R.id.toggleButtonEnabled);
+        rgGender = findViewById(R.id.radioGroupGender);
 
         buttonDisplay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +41,28 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        View btnDisplay = null;
+        btnDisplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Code for the action
+                String stringResponse = etInput.getText().toString();
+                int checkedRadioId = rgGender.getCheckedRadioButtonId();
+                if(checkedRadioId == R.id.radioButtonGenderMale) {
+                    // Write the code when male selected
+                    stringResponse = "He says"+ stringResponse;
+                }else {
+
+             
+                    // Write the code when female selected
+                        stringResponse = "She says" + stringResponse;
+
+                }
+                tvDisplay.setText(stringResponse);
+            }
+        });
+
 
         tbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,14 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 //when the toggle button is unchecked, disable the EditText,
                 // when the toggle button is checked, enable the the EditText
 
-
-
-
-
             }
         });
-
-
 
     }
 }
