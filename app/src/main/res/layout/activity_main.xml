@@ -41,5 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="Enabled" />
+        android:text="Enabled"
+        android:textOff="Disabled"
+        android:textOn="Enabled" />
 </LinearLayout>

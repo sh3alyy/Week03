@@ -55,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
                 //when the toggle button is unchecked, disable the EditText,
                 // when the toggle button is checked, enable the the EditText
-                // editTextInput when the toggle button is unchecked
-                //enable it when it is checked
 
 
 
