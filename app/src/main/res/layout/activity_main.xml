@@ -35,4 +35,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/display_what_the_user_enters"/>
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Enabled" />
 </LinearLayout>
